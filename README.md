@@ -1,4 +1,4 @@
-1 Realize download do app Expo para escanear i QrCode (https://play.google.com/store/apps/details?id=host.exp.exponent)
+1 Realize download do app Expo para escanear o QrCode (https://play.google.com/store/apps/details?id=host.exp.exponent)
 
 2 Escaneia o QR code para vizualizar o App
 

@@ -7,6 +7,7 @@ import {
   StatusBar,
   Image,
   Button,
+  View,
   Linking,
 } from 'react-native';
 import Constants from 'expo-constants';
@@ -28,13 +29,7 @@ export default function App() {
           source={{
             uri: img,
           }}
-          style={{
-            with: 200,
-            height: 200,
-            margin: 90,
-            marginBottom: 30,
-            borderRadius: 100,
-          }}
+          style={ styles.img}
         />
 
         <Text style={styles.Text}>Daniel Mingoranse da Silva</Text>
@@ -43,7 +38,7 @@ export default function App() {
         <Text style={styles.subtext}>
           Cursando Ensino superior Fatec Rubens Lara, SP
         </Text>
-        <Text style={styles.Text}>Experiencia</Text>
+        <Text style={styles.Text}>Experiência</Text>
 
         <Text style={styles.subtext}>
           Tecnico em Informatica - Poupatempo Praia Grande, SP
@@ -52,31 +47,31 @@ export default function App() {
         <Text style={styles.Text}>Sobre mim</Text>
 
         <Text style={styles.textolongo}>
-          Falando um pouco sobre mim Desenvolvedor web apaixonado pela área
-          tecnológica, curioso e atencioso em aprender de tudo um pouco com a
-          intenção de transformar ideias, em novas realidade, para melhor e
-          assim profissionalizar minha carreira como um desenvolvedor de ponta.
+          Falando um pouco sobre mim, sou apaixonado pela área de tecnologia,
+          curioso e atencioso em aprender de tudo um pouco com a intenção de
+          transformar ideias, em novas realidade para melhor e assim
+          profissionalizar minha carreira como um desenvolvedor de ponta.
         </Text>
 
         <Text style={{ margin: 2 }}></Text>
-
+  
         <Button
           title="Github"
-          style={{ fontSize: 200 }}
           onPress={() => {
             Linking.openURL('https://github.com/Daniel-Mingoranse');
           }}></Button>
 
         <Text style={{ margin: 2 }}></Text>
+     
+          <Button
+            title="Linkedin"
+            onPress={() => {
+              Linking.openURL(
+                'https://www.linkedin.com/in/daniel-mingoranse-94530b16a'
+              );
+            }}></Button>
+        
 
-        <Button
-          title="Linkedin"
-          style={{ fontSize: 20 }}
-          onPress={() => {
-            Linking.openURL(
-              'https://www.linkedin.com/in/daniel-mingoranse-94530b16a'
-            );
-          }}></Button>
       </ScrollView>
     </SafeAreaView>
   );
@@ -86,9 +81,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    marginHorizontal: 0,
     paddingTop: Constants.statusBarHeight,
     backgroundColor: 'white',
-    padding: 8,
+    
   },
   paragraph: {
     margin: 24,
@@ -98,7 +94,10 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     backgroundColor: 'white',
-    marginHorizontal: 20,
+    marginHorizontal: 30,
+    // marginVertical:5,
+    borderRadius: 20,
+    justifyContent: 'center',
   },
   Text: {
     fontSize: 24,
@@ -115,10 +114,15 @@ const styles = StyleSheet.create({
   },
   textolongo: {
     fontSize: 20,
-
+    textAlign: 'left',
     margin: 5,
   },
-  Button: {
-    marginBottom: 1,
-  },
+  img:{
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    margin:100,
+    marginBottom:0,
+    marginTop:120
+          }
 });
